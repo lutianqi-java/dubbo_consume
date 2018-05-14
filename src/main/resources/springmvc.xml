@@ -15,14 +15,14 @@
 
     <!--<context:property-placeholder location="classpath:config/config.properties" />-->
 
-    <!-- 解决springMVC响应数据乱码   text/plain就是响应的时候原样返回数据
+    <!-- 解决springMVC响应数据乱码   text/plain就是响应的时候原样返回数据-->
         <mvc:annotation-driven>
             <mvc:message-converters register-defaults="true">
                 <bean class="org.springframework.http.converter.StringHttpMessageConverter">
                     <property name="supportedMediaTypes" value = "text/plain;charset=UTF-8" />
                 </bean>
             </mvc:message-converters>
-        </mvc:annotation-driven>-->
+        </mvc:annotation-driven>
     <!--<bean id="stringHttpMessageConverter" class="org.springframework.http.converter.StringHttpMessageConverter">
             <property name="supportedMediaTypes" value = "text/plain;charset=UTF-8" />
         </bean>-->
@@ -69,10 +69,10 @@
 
         </mvc:interceptors> -->
     <!-- 配置视图解析 -->
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/jsp/"/>
-        <property name="suffix" value=".jsp"/>
-    </bean>
+    <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+        <!--<property name="prefix" value="/WEB-INF/jsp/"/>-->
+        <!--<property name="suffix" value=".jsp"/>-->
+    <!--</bean>-->
 
     <!--<mvc:view-controller path="/" view-name="redirect:/index" />-->
 
@@ -123,6 +123,8 @@
             </props>
         </property>
     </bean>
+
+
 
     <!--
         <bean id="oracle" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
